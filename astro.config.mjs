@@ -1,7 +1,9 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwind from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://lriaomol.github.io',
-  integrations: [tailwind()],
+  vite: {
+    plugins: [tailwind()],
+  },
 });
