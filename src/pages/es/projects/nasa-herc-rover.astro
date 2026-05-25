@@ -1,0 +1,108 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+<Layout
+  title="Diseño Estructural y FEA — Rover NASA HERC — Alejandro Riaño-Molina"
+  description="Diseño estructural y optimización por elementos finitos de un rover para el Human Exploration Rover Challenge de la NASA. Safety Award 2022."
+  lang="es-CO"
+>
+  <nav id="navbar">
+    <a href="/es/" class="nav-logo">ARM<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/es/#projects">Proyectos</a></li>
+      <li><a href="/es/#contact">Contacto</a></li>
+      <li><a href="/projects/nasa-herc-rover" class="lang-toggle">EN / <span class="current">ES</span></a></li>
+    </ul>
+  </nav>
+
+  <main class="project-page">
+    <a href="/es/#projects" class="project-back"><span>←</span><span>Volver a proyectos</span></a>
+
+    <div class="section-tag">Proyecto 03 · 2021–2023 · NASA HERC</div>
+    <h1>Diseño Estructural y FEA — Rover NASA HERC</h1>
+    <p class="hero-sub" style="opacity:1; animation:none; max-width:720px; margin-top:1rem;">
+      Diseño estructural y optimización FEA de un rover de propulsión humana para el Human Exploration Rover Challenge de la NASA. Safety Award 2022.
+    </p>
+
+    <div class="project-meta">
+      <div class="project-meta-item"><span class="label">Institución</span><span class="value">Universidad Nacional de Colombia</span></div>
+      <div class="project-meta-item"><span class="label">Rol</span><span class="value">Líder de diseño estructural</span></div>
+      <div class="project-meta-item"><span class="label">Herramientas</span><span class="value">Autodesk Inventor · ANSYS · Manuf. Aditiva</span></div>
+      <div class="project-meta-item"><span class="label">Reconocimiento</span><span class="value">⭑ NASA Safety Award 2022</span></div>
+    </div>
+
+    <div class="project-hero-media placeholder" data-label="Foto o render CAD del rover · /images/projects/rover-hero.jpg o /videos/rover-loop.mp4">
+      <img src="/images/projects/rover-hero.jpg" alt="Rover NASA HERC" onerror="this.style.display='none'" />
+    </div>
+
+    <div class="project-section">
+      <h3>Contexto</h3>
+      <p>
+        El Human Exploration Rover Challenge (HERC) de la NASA es una competencia anual de ingeniería en la que
+        equipos universitarios de todo el mundo diseñan, construyen y compiten con un rover de propulsión humana
+        sobre un trazado que simula terrenos lunares y marcianos. El desafío vive en el cruce entre el diseño
+        mecánico, la manufactura y la seguridad operacional.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h3>Mi rol</h3>
+      <p>
+        Lideré el equipo de diseño estructural y FEA responsable de la transmisión y el chasis del rover.
+        Mis contribuciones directas incluyeron:
+      </p>
+      <ul>
+        <li>Diseño CAD del chasis y la carcasa de la transmisión en Autodesk Inventor.</li>
+        <li>Análisis FEA estático y de fatiga del chasis bajo escenarios de carga representativos (ocupantes, impactos del terreno).</li>
+        <li>Estudios de optimización topológica para reducir masa preservando la rigidez en zonas críticas.</li>
+        <li>Estrategia de manufactura: combinación de mecanizado tradicional con manufactura aditiva en los componentes que se beneficiaban de geometrías complejas.</li>
+        <li>Coordinación con el resto del equipo para que las decisiones estructurales fueran coherentes con los subsistemas eléctrico, de movilidad y de seguridad.</li>
+      </ul>
+    </div>
+
+    <div class="project-gallery">
+      <div class="project-hero-media placeholder" data-label="/images/projects/rover-cad.jpg · Modelo CAD">
+        <img src="/images/projects/rover-cad.jpg" alt="CAD del rover" onerror="this.style.display='none'" />
+      </div>
+      <div class="project-hero-media placeholder" data-label="/images/projects/rover-fea.jpg · Contorno de esfuerzos">
+        <img src="/images/projects/rover-fea.jpg" alt="Resultados FEA" onerror="this.style.display='none'" />
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3>Resultado</h3>
+      <p>
+        El equipo recibió el <strong>Safety Award del NASA Human Exploration Rover Challenge 2022</strong>,
+        un reconocimiento centrado en la integridad y las decisiones de diseño del vehículo. El proyecto también
+        recibió una moción de felicitación del Ministerio de Educación de Colombia.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h3>Qué aprendí</h3>
+      <p>
+        HERC fue mi primer contacto real con la responsabilidad de liderar un subequipo técnico bajo plazos
+        duros y presupuesto limitado. La lección más grande: las decisiones estructurales no viven solas — cada
+        kilo ahorrado en el chasis afectaba al tren motriz, cada elección de tornillería pesaba en la inspección
+        de seguridad. Esa mirada de sistema es algo que cargo hoy a mi investigación.
+      </p>
+    </div>
+
+    <div class="project-next">
+      <a href="/es/projects/energetic-materials">← Anterior: Materiales Energéticos</a>
+      <a href="/es/#projects">Todos los proyectos →</a>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-text">Alejandro Riaño-Molina <span>·</span> Ann Arbor, Michigan</span>
+    <span class="footer-text">Hecho con Astro <span>·</span> Alojado en GitHub Pages</span>
+  </footer>
+
+  <script is:inline>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+</Layout>

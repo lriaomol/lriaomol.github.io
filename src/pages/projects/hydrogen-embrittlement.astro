@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="Hydrogen Embrittlement in Aerospace Engine Valves — Alejandro Riaño-Molina"
+  description="Phase Field Damage Model (PFDM) combined with HEDE and HELP mechanisms to analyze hydrogen-induced failure in aerospace structural components."
+  lang="en"
+>
+  <nav id="navbar">
+    <a href="/" class="nav-logo">ARM<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li><a href="/es/projects/hydrogen-embrittlement" class="lang-toggle"><span class="current">EN</span> / ES</a></li>
+    </ul>
+  </nav>
+
+  <main class="project-page">
+    <a href="/#projects" class="project-back"><span>←</span><span>Back to projects</span></a>
+
+    <div class="section-tag">Project 01 · 2023–2024</div>
+    <h1>Hydrogen Embrittlement in Aerospace Engine Valves</h1>
+    <p class="hero-sub" style="opacity:1; animation:none; max-width:720px; margin-top:1rem;">
+      A phase field framework for predicting hydrogen-induced failure in structural components of liquid-propellant rocket engines.
+    </p>
+
+    <div class="project-meta">
+      <div class="project-meta-item"><span class="label">Institution</span><span class="value">UNAL · GIDA Group</span></div>
+      <div class="project-meta-item"><span class="label">Role</span><span class="value">Aerospace Research Assistant</span></div>
+      <div class="project-meta-item"><span class="label">Tools</span><span class="value">MOOSE · C++ · ParaView</span></div>
+      <div class="project-meta-item"><span class="label">Output</span><span class="value">IAC 2024 · CEC 2023</span></div>
+    </div>
+
+    <!--
+      MAIN IMAGE / VIDEO:
+      Place a hero image at /public/images/projects/hydrogen-hero.jpg
+      (1600×900 recommended — ParaView render of crack propagation, mesh,
+      or phase field damage variable d ∈ [0,1] across the geometry).
+      Or use a short looping video at /public/videos/hydrogen-loop.mp4.
+    -->
+    <div class="project-hero-media placeholder" data-label="Place a ParaView render of the phase field damage variable here · /images/projects/hydrogen-hero.jpg">
+      <img src="/images/projects/hydrogen-hero.jpg" alt="Phase field damage simulation" onerror="this.style.display='none'" />
+    </div>
+
+    <div class="project-section">
+      <h3>Context</h3>
+      <p>
+        Hydrogen embrittlement (HE) is a long-standing failure mode in metallic components exposed to gaseous or
+        dissolved hydrogen — particularly relevant in liquid-propellant rocket engines, where valves and turbopumps
+        operate under high pressure and cryogenic conditions. Predicting HE-driven crack initiation and propagation
+        is still a hard problem because it couples diffusion, stress fields, and microstructural damage mechanisms.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h3>Approach</h3>
+      <p>
+        I implemented a coupled <strong>phase field damage model (PFDM)</strong> incorporating two of the dominant
+        embrittlement mechanisms reported in the literature:
+      </p>
+      <ul>
+        <li><strong>HEDE</strong> (Hydrogen-Enhanced Decohesion) — local reduction of cohesive strength.</li>
+        <li><strong>HELP</strong> (Hydrogen-Enhanced Localized Plasticity) — shielding of dislocations, promoting localized softening.</li>
+      </ul>
+      <p>
+        The implementation was built on the <strong>MOOSE Framework</strong> (C++), solving the coupled
+        displacement / damage / hydrogen-concentration system with finite elements.
+      </p>
+    </div>
+
+    <div class="project-gallery">
+      <div class="project-hero-media placeholder" data-label="/images/projects/hydrogen-mesh.jpg · FE mesh">
+        <img src="/images/projects/hydrogen-mesh.jpg" alt="Finite element mesh" onerror="this.style.display='none'" />
+      </div>
+      <div class="project-hero-media placeholder" data-label="/images/projects/hydrogen-result.jpg · Damage field">
+        <img src="/images/projects/hydrogen-result.jpg" alt="Damage field result" onerror="this.style.display='none'" />
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3>Outcome</h3>
+      <p>
+        The framework reproduced the qualitative crack-path behavior reported in experimental studies on
+        hydrogen-charged steels, and was the basis for two conference contributions (IAC Milan 2024, CEC 2023)
+        and my undergraduate thesis at Universidad Nacional de Colombia.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h3>What I'd improve</h3>
+      <p>
+        The current model assumes isotropic hydrogen diffusion and a single damage variable. A natural next step
+        would be to incorporate trap-controlled diffusion and a microstructure-informed phase field, and to validate
+        against in-situ hydrogen-charging experiments with full-field DIC.
+      </p>
+    </div>
+
+    <div class="project-next">
+      <a href="/#projects">← All projects</a>
+      <a href="/projects/energetic-materials">Next: Energetic Materials →</a>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-text">Alejandro Riaño-Molina <span>·</span> Ann Arbor, MI</span>
+    <span class="footer-text">Built with Astro <span>·</span> Hosted on GitHub Pages</span>
+  </footer>
+
+  <script is:inline>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+</Layout>

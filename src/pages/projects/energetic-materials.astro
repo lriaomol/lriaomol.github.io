@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="FE Simulation of Shock Waves in Energetic Materials — Alejandro Riaño-Molina"
+  description="Finite element analysis of localized high-temperature-rate regions in energetic materials under shock wave loading. Research conducted at Purdue University."
+  lang="en"
+>
+  <nav id="navbar">
+    <a href="/" class="nav-logo">ARM<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li><a href="/es/projects/energetic-materials" class="lang-toggle"><span class="current">EN</span> / ES</a></li>
+    </ul>
+  </nav>
+
+  <main class="project-page">
+    <a href="/#projects" class="project-back"><span>←</span><span>Back to projects</span></a>
+
+    <div class="section-tag">Project 02 · 2023–2024 · Purdue University</div>
+    <h1>FE Simulation of Shock Waves in Energetic Materials</h1>
+    <p class="hero-sub" style="opacity:1; animation:none; max-width:720px; margin-top:1rem;">
+      Finite element analysis of localized high-temperature-rate ("hotspot") regions in energetic materials under shock wave loading.
+    </p>
+
+    <div class="project-meta">
+      <div class="project-meta-item"><span class="label">Institution</span><span class="value">Purdue University</span></div>
+      <div class="project-meta-item"><span class="label">Advisor</span><span class="value">Dr. Marisol Koslowski</span></div>
+      <div class="project-meta-item"><span class="label">Role</span><span class="value">Undergraduate Research Assistant</span></div>
+      <div class="project-meta-item"><span class="label">Tools</span><span class="value">ANSYS · FEA · Python post-processing</span></div>
+    </div>
+
+    <!--
+      MAIN IMAGE / VIDEO:
+      Place a hero image at /public/images/projects/energetic-hero.jpg
+      (1600×900 — e.g. temperature contour plot on the shocked geometry, or
+      a snapshot of the mesh with the shock front).
+      Recommended VIDEO option: /public/videos/energetic-loop.mp4 — a short
+      muted loop showing the temperature evolution. This is the kind of asset
+      that catches a recruiter's eye in 2 seconds.
+    -->
+    <div class="project-hero-media placeholder" data-label="Place a shock-wave temperature field render here · /images/projects/energetic-hero.jpg or /videos/energetic-loop.mp4">
+      <img src="/images/projects/energetic-hero.jpg" alt="Shock wave simulation" onerror="this.style.display='none'" />
+    </div>
+
+    <div class="project-section">
+      <h3>Context</h3>
+      <p>
+        When a shock wave propagates through an energetic material, the response is not homogeneous: a small
+        fraction of the volume concentrates a disproportionate amount of energy in regions known as <em>hotspots</em>.
+        These localized high-temperature-rate zones are the precursors to initiation, and understanding their formation
+        is central to both safety analysis and detonator design.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h3>Approach</h3>
+      <p>
+        Using <strong>ANSYS</strong>, I set up coupled thermo-mechanical finite element simulations of representative
+        microstructures subjected to shock loading. The work focused on:
+      </p>
+      <ul>
+        <li>Identifying the geometric features (pores, voids, interfaces) that drive hotspot formation.</li>
+        <li>Quantifying the temperature rise rate as a function of shock pressure and microstructural geometry.</li>
+        <li>Post-processing fields in Python to extract statistical descriptors of the hotspot distribution.</li>
+      </ul>
+    </div>
+
+    <div class="project-gallery">
+      <div class="project-hero-media placeholder" data-label="/images/projects/energetic-mesh.jpg">
+        <img src="/images/projects/energetic-mesh.jpg" alt="FE mesh" onerror="this.style.display='none'" />
+      </div>
+      <div class="project-hero-media placeholder" data-label="/images/projects/energetic-temp.jpg · Temperature field">
+        <img src="/images/projects/energetic-temp.jpg" alt="Temperature field" onerror="this.style.display='none'" />
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3>Outcome</h3>
+      <p>
+        The simulations contributed to an ongoing line of research in Dr. Koslowski's group on multiscale modeling
+        of shock-induced initiation. The experience was, more broadly, my first formal exposure to U.S. research
+        culture and a direct path into my current Ph.D. work at Michigan.
+      </p>
+    </div>
+
+    <div class="project-next">
+      <a href="/projects/hydrogen-embrittlement">← Previous: Hydrogen Embrittlement</a>
+      <a href="/projects/nasa-herc-rover">Next: NASA HERC Rover →</a>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-text">Alejandro Riaño-Molina <span>·</span> Ann Arbor, MI</span>
+    <span class="footer-text">Built with Astro <span>·</span> Hosted on GitHub Pages</span>
+  </footer>
+
+  <script is:inline>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+</Layout>

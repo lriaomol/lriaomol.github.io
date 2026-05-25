@@ -1,0 +1,108 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+<Layout
+  title="Fragilización por Hidrógeno en Válvulas Aeroespaciales — Alejandro Riaño-Molina"
+  description="Modelo Phase Field Damage (PFDM) combinado con HEDE y HELP para analizar la falla por hidrógeno en componentes estructurales aeroespaciales."
+  lang="es-CO"
+>
+  <nav id="navbar">
+    <a href="/es/" class="nav-logo">ARM<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/es/#projects">Proyectos</a></li>
+      <li><a href="/es/#contact">Contacto</a></li>
+      <li><a href="/projects/hydrogen-embrittlement" class="lang-toggle">EN / <span class="current">ES</span></a></li>
+    </ul>
+  </nav>
+
+  <main class="project-page">
+    <a href="/es/#projects" class="project-back"><span>←</span><span>Volver a proyectos</span></a>
+
+    <div class="section-tag">Proyecto 01 · 2023–2024</div>
+    <h1>Fragilización por Hidrógeno en Válvulas de Motor Aeroespacial</h1>
+    <p class="hero-sub" style="opacity:1; animation:none; max-width:720px; margin-top:1rem;">
+      Un marco de phase field para predecir la falla inducida por hidrógeno en componentes estructurales de motores cohete de propelente líquido.
+    </p>
+
+    <div class="project-meta">
+      <div class="project-meta-item"><span class="label">Institución</span><span class="value">UNAL · Grupo GIDA</span></div>
+      <div class="project-meta-item"><span class="label">Rol</span><span class="value">Asistente de investigación aeroespacial</span></div>
+      <div class="project-meta-item"><span class="label">Herramientas</span><span class="value">MOOSE · C++ · ParaView</span></div>
+      <div class="project-meta-item"><span class="label">Productos</span><span class="value">IAC 2024 · CEC 2023</span></div>
+    </div>
+
+    <div class="project-hero-media placeholder" data-label="Ubique aquí un render de ParaView del campo de daño · /images/projects/hydrogen-hero.jpg">
+      <img src="/images/projects/hydrogen-hero.jpg" alt="Simulación de daño por hidrógeno" onerror="this.style.display='none'" />
+    </div>
+
+    <div class="project-section">
+      <h3>Contexto</h3>
+      <p>
+        La fragilización por hidrógeno (HE) es un modo de falla conocido en componentes metálicos expuestos a hidrógeno
+        gaseoso o disuelto — particularmente importante en motores cohete de propelente líquido, donde válvulas y
+        turbobombas operan bajo alta presión y condiciones criogénicas. Predecir la iniciación y propagación de grietas
+        por HE sigue siendo un problema difícil porque acopla difusión, campos de esfuerzo y mecanismos de daño microestructural.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h3>Aproximación</h3>
+      <p>
+        Implementé un <strong>modelo phase field damage (PFDM)</strong> acoplado, que incorpora dos de los mecanismos
+        dominantes reportados en la literatura:
+      </p>
+      <ul>
+        <li><strong>HEDE</strong> (Hydrogen-Enhanced Decohesion) — reducción local de la resistencia cohesiva.</li>
+        <li><strong>HELP</strong> (Hydrogen-Enhanced Localized Plasticity) — apantallamiento de dislocaciones, promoviendo ablandamiento localizado.</li>
+      </ul>
+      <p>
+        La implementación se construyó en el <strong>MOOSE Framework</strong> (C++), resolviendo por elementos finitos
+        el sistema acoplado de desplazamiento, daño y concentración de hidrógeno.
+      </p>
+    </div>
+
+    <div class="project-gallery">
+      <div class="project-hero-media placeholder" data-label="/images/projects/hydrogen-mesh.jpg · Malla FE">
+        <img src="/images/projects/hydrogen-mesh.jpg" alt="Malla de elementos finitos" onerror="this.style.display='none'" />
+      </div>
+      <div class="project-hero-media placeholder" data-label="/images/projects/hydrogen-result.jpg · Campo de daño">
+        <img src="/images/projects/hydrogen-result.jpg" alt="Resultado del campo de daño" onerror="this.style.display='none'" />
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3>Resultado</h3>
+      <p>
+        El modelo reprodujo cualitativamente el comportamiento de propagación de grieta reportado en estudios
+        experimentales sobre aceros cargados con hidrógeno, y fue la base de dos contribuciones a conferencias
+        (IAC Milán 2024, CEC 2023) y de mi trabajo de grado en la Universidad Nacional de Colombia.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h3>Qué mejoraría</h3>
+      <p>
+        El modelo actual asume difusión isotrópica de hidrógeno y una sola variable de daño. Un siguiente paso natural
+        sería incorporar difusión controlada por trampas y un phase field informado por la microestructura, y validar
+        contra ensayos de carga de hidrógeno in-situ con DIC de campo completo.
+      </p>
+    </div>
+
+    <div class="project-next">
+      <a href="/es/#projects">← Todos los proyectos</a>
+      <a href="/es/projects/energetic-materials">Siguiente: Materiales energéticos →</a>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-text">Alejandro Riaño-Molina <span>·</span> Ann Arbor, Michigan</span>
+    <span class="footer-text">Hecho con Astro <span>·</span> Alojado en GitHub Pages</span>
+  </footer>
+
+  <script is:inline>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+</Layout>

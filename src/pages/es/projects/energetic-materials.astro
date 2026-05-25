@@ -1,0 +1,96 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+<Layout
+  title="Simulación FE de Ondas de Choque en Materiales Energéticos — Alejandro Riaño-Molina"
+  description="Análisis por elementos finitos de regiones localizadas con alta tasa de temperatura en materiales energéticos bajo carga de onda de choque. Investigación en Purdue University."
+  lang="es-CO"
+>
+  <nav id="navbar">
+    <a href="/es/" class="nav-logo">ARM<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/es/#projects">Proyectos</a></li>
+      <li><a href="/es/#contact">Contacto</a></li>
+      <li><a href="/projects/energetic-materials" class="lang-toggle">EN / <span class="current">ES</span></a></li>
+    </ul>
+  </nav>
+
+  <main class="project-page">
+    <a href="/es/#projects" class="project-back"><span>←</span><span>Volver a proyectos</span></a>
+
+    <div class="section-tag">Proyecto 02 · 2023–2024 · Purdue University</div>
+    <h1>Simulación FE de Ondas de Choque en Materiales Energéticos</h1>
+    <p class="hero-sub" style="opacity:1; animation:none; max-width:720px; margin-top:1rem;">
+      Análisis por elementos finitos de regiones localizadas de alta tasa de temperatura ("hotspots") en materiales energéticos bajo cargas de onda de choque.
+    </p>
+
+    <div class="project-meta">
+      <div class="project-meta-item"><span class="label">Institución</span><span class="value">Purdue University</span></div>
+      <div class="project-meta-item"><span class="label">Director</span><span class="value">Dra. Marisol Koslowski</span></div>
+      <div class="project-meta-item"><span class="label">Rol</span><span class="value">Asistente de investigación</span></div>
+      <div class="project-meta-item"><span class="label">Herramientas</span><span class="value">ANSYS · FEA · Post-procesado en Python</span></div>
+    </div>
+
+    <div class="project-hero-media placeholder" data-label="Render del campo de temperatura tras la onda de choque · /images/projects/energetic-hero.jpg o /videos/energetic-loop.mp4">
+      <img src="/images/projects/energetic-hero.jpg" alt="Simulación de onda de choque" onerror="this.style.display='none'" />
+    </div>
+
+    <div class="project-section">
+      <h3>Contexto</h3>
+      <p>
+        Cuando una onda de choque atraviesa un material energético, la respuesta no es homogénea: una pequeña fracción
+        del volumen concentra una cantidad desproporcionada de energía en regiones llamadas <em>hotspots</em>.
+        Estas zonas localizadas con alta tasa de temperatura son las precursoras de la iniciación, y comprender su
+        formación es central tanto para el análisis de seguridad como para el diseño de detonadores.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h3>Aproximación</h3>
+      <p>
+        Usando <strong>ANSYS</strong>, configuré simulaciones termo-mecánicas acopladas por elementos finitos
+        de microestructuras representativas sometidas a carga de choque. El trabajo se concentró en:
+      </p>
+      <ul>
+        <li>Identificar las características geométricas (poros, vacíos, interfaces) que generan los hotspots.</li>
+        <li>Cuantificar la tasa de incremento de temperatura en función de la presión de choque y la geometría microestructural.</li>
+        <li>Post-procesar los campos en Python para extraer descriptores estadísticos de la distribución de hotspots.</li>
+      </ul>
+    </div>
+
+    <div class="project-gallery">
+      <div class="project-hero-media placeholder" data-label="/images/projects/energetic-mesh.jpg">
+        <img src="/images/projects/energetic-mesh.jpg" alt="Malla FE" onerror="this.style.display='none'" />
+      </div>
+      <div class="project-hero-media placeholder" data-label="/images/projects/energetic-temp.jpg · Campo de temperatura">
+        <img src="/images/projects/energetic-temp.jpg" alt="Campo de temperatura" onerror="this.style.display='none'" />
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3>Resultado</h3>
+      <p>
+        Las simulaciones contribuyeron a una línea de investigación activa en el grupo de la Dra. Koslowski sobre
+        modelado multiescala de la iniciación inducida por choque. La experiencia fue, además, mi primer contacto
+        formal con la cultura de investigación estadounidense y la antesala directa de mi doctorado en Michigan.
+      </p>
+    </div>
+
+    <div class="project-next">
+      <a href="/es/projects/hydrogen-embrittlement">← Anterior: Fragilización por Hidrógeno</a>
+      <a href="/es/projects/nasa-herc-rover">Siguiente: Rover NASA HERC →</a>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-text">Alejandro Riaño-Molina <span>·</span> Ann Arbor, Michigan</span>
+    <span class="footer-text">Hecho con Astro <span>·</span> Alojado en GitHub Pages</span>
+  </footer>
+
+  <script is:inline>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+</Layout>

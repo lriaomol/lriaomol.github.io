@@ -1,0 +1,445 @@
+---
+// src/pages/es/index.astro — Alejandro Riaño-Molina (ES — Cundiboyacense)
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="Alejandro Riaño-Molina — Ingeniero Mecánico y Aeroespacial"
+  description="Estudiante de doctorado en la Universidad de Michigan. Mecánica computacional, mecánica de sólidos, modelos de phase field, elementos finitos, fragilización por hidrógeno y sistemas aeroespaciales."
+  lang="es-CO"
+>
+
+  <!-- Nav -->
+  <nav id="navbar">
+    <a href="/es/" class="nav-logo">ARM<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">Acerca</a></li>
+      <li><a href="#experience">Experiencia</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#awards">Reconocimientos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+      <li><a href="/" class="lang-toggle">EN / <span class="current">ES</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <!-- <video id="hero-video" src="/videos/hero.mp4" autoplay muted loop playsinline></video> -->
+
+    <div class="hero-inner">
+      <div class="hero-tag">Estudiante de doctorado · Universidad de Michigan</div>
+      <h1>
+        Ingeniería en<br>
+        los <span class="accent">límites</span> de
+        <span class="line-2">los materiales y la mecánica.</span>
+      </h1>
+      <p class="hero-sub">
+        Construyo modelos computacionales donde las estructuras tocan sus fronteras físicas —
+        desde modelos de phase field para daño en componentes aeroespaciales, hasta simulaciones
+        por elementos finitos de materiales bajo condiciones extremas.
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary"><span>Ver mi trabajo</span><span>↓</span></a>
+        <a href="mailto:alejorm@umich.edu" class="btn-ghost"><span>Escríbame</span></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Ponencias en conferencias</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Centros de investigación</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Idiomas de trabajo</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">HERC</span>
+          <span class="stat-label">Premio NASA a la seguridad · 2022</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-tag">Acerca de mí</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="highlight">
+            Soy ingeniero mecánico, nacido en <strong>Villapinzón, Cundinamarca</strong>, y hoy estudiante
+            de doctorado en la Universidad de Michigan — guiado por una pregunta muy concreta:
+            <strong>¿cómo fallan los materiales, y cómo podemos predecirlo antes de que ocurra?</strong>
+          </p>
+          <p>
+            Mi trabajo vive en el cruce entre la <strong>mecánica de sólidos, el modelado computacional
+            y la ingeniería aeroespacial</strong>. He analizado la fragilización por hidrógeno en válvulas
+            de motores, simulado los efectos de ondas de choque en materiales energéticos en Purdue, y
+            participé en el diseño estructural de un rover para el Human Exploration Rover Challenge de la NASA.
+          </p>
+          <p>
+            Por fuera del laboratorio, hago parte del <strong>Space Generation Advisory Council</strong>,
+            donde he liderado talleres por varios países de Suramérica para tender puentes entre las
+            próximas generaciones de ingenieros del sector espacial.
+          </p>
+          <p>
+            Resido en Ann Arbor, Michigan. Soy de Villapinzón, en la región cundiboyacense de Colombia.
+            Trabajo en español, inglés y francés.
+          </p>
+          <br />
+          <a href="mailto:alejorm@umich.edu" class="btn-ghost" style="display:inline-flex;">Abierto a colaborar →</a>
+        </div>
+        <div class="about-right reveal">
+          <ul class="timeline">
+            <li class="current">
+              <div class="tl-date">2024 → Actualidad</div>
+              <div class="tl-title">Doctorado en Ingeniería Mecánica</div>
+              <div class="tl-place">Universidad de Michigan, Ann Arbor</div>
+            </li>
+            <li>
+              <div class="tl-date">2023 – 2024</div>
+              <div class="tl-title">Asistente de investigación</div>
+              <div class="tl-place">Purdue University · Dra. Marisol Koslowski</div>
+            </li>
+            <li>
+              <div class="tl-date">2021 – 2023</div>
+              <div class="tl-title">Líder de diseño estructural · Rover NASA HERC</div>
+              <div class="tl-place">Universidad Nacional de Colombia</div>
+            </li>
+            <li>
+              <div class="tl-date">2019 – 2024</div>
+              <div class="tl-title">Grupo de Investigación Aeroespacial</div>
+              <div class="tl-place">GIDA · Universidad Nacional de Colombia</div>
+            </li>
+            <li>
+              <div class="tl-date">2018 – 2024</div>
+              <div class="tl-title">Ingeniería Mecánica · Promedio 4.3/5</div>
+              <div class="tl-place">Universidad Nacional de Colombia</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-tag">Experiencia</div>
+      <h2>Investigación y centros académicos</h2>
+      <div class="exp-list">
+
+        <div class="exp-item reveal">
+          <div class="exp-header">
+            <div class="exp-logo-wrap">
+              <img src="/images/U-M_Logo-Hex.png" alt="Universidad de Michigan" class="exp-logo" loading="lazy" />
+            </div>
+            <div class="exp-meta">
+              <div class="exp-institution">Universidad de Michigan</div>
+              <div class="exp-location">Ann Arbor, Michigan, EE. UU.</div>
+              <div class="exp-period">2024 → Actualidad</div>
+            </div>
+            <div class="exp-badge current">Actual</div>
+          </div>
+          <div class="exp-roles">
+            <div class="exp-role">
+              <div class="role-title">Doctorado en Ingeniería Mecánica</div>
+              <div class="role-desc">Investigación doctoral en mecánica de sólidos, mecánica computacional y data-driven computing. Graduación prevista: mayo de 2030.</div>
+              <div class="role-tags">
+                <span class="tag">Mecánica de Sólidos</span>
+                <span class="tag">Mec. Computacional</span>
+                <span class="tag">C++</span>
+                <span class="tag">Data-Driven Computing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item reveal">
+          <div class="exp-header">
+            <div class="exp-logo-wrap">
+              <img src="/images/purdue-logo.png" alt="Purdue University" class="exp-logo" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+            <div class="exp-meta">
+              <div class="exp-institution">Purdue University</div>
+              <div class="exp-location">West Lafayette, Indiana, EE. UU.</div>
+              <div class="exp-period">Ago 2023 – Feb 2024</div>
+            </div>
+          </div>
+          <div class="exp-roles">
+            <div class="exp-role">
+              <div class="role-title">Asistente de Investigación</div>
+              <div class="role-desc">Simulaciones por elementos finitos para analizar regiones localizadas de alta tasa de temperatura en materiales energéticos sometidos a ondas de choque. Bajo la dirección de la Dra. Marisol Koslowski.</div>
+              <div class="role-tags">
+                <span class="tag">FEA</span>
+                <span class="tag">Mec. de Choque</span>
+                <span class="tag">Mat. Energéticos</span>
+                <span class="tag">Análisis Térmico</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item reveal">
+          <div class="exp-header">
+            <div class="exp-logo-wrap">
+              <img src="/images/unal-logo.png" alt="Universidad Nacional de Colombia" class="exp-logo" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+            <div class="exp-meta">
+              <div class="exp-institution">Universidad Nacional de Colombia</div>
+              <div class="exp-location">Bogotá, Colombia</div>
+              <div class="exp-period">2019 – 2024</div>
+            </div>
+          </div>
+          <div class="exp-roles">
+            <div class="exp-role">
+              <div class="role-title">Ingeniería Mecánica — Promedio 4.3/5</div>
+              <div class="role-desc">Graduado en septiembre de 2024. Trabajo de grado: <em>"Aplicación de elementos finitos para el análisis de la respuesta de materiales expuestos a condiciones extremas."</em> Mención por resultados destacados en pruebas académicas internacionales (2022).</div>
+              <div class="role-tags">
+                <span class="tag">Trabajo de Grado</span>
+                <span class="tag">FEA</span>
+                <span class="tag">Condiciones Extremas</span>
+              </div>
+            </div>
+            <div class="exp-role">
+              <div class="role-title">Asistente de Investigación Aeroespacial — Grupo GIDA</div>
+              <div class="role-desc">Análisis de fragilización por hidrógeno en válvulas de motor con el modelo Phase Field Damage Model (PFDM), HEDE y HELP. Caracterización CFD del inyector HHX FullJet en OpenFOAM. Ponencias en IAC Milán 2024, CEC 2023 y CATE 2021.</div>
+              <div class="role-tags">
+                <span class="tag">MOOSE</span>
+                <span class="tag">OpenFOAM</span>
+                <span class="tag">Phase Field</span>
+                <span class="tag">CFD</span>
+                <span class="tag">Aeroespacial</span>
+              </div>
+            </div>
+            <div class="exp-role">
+              <div class="role-title">Líder de Diseño Estructural — Rover NASA HERC</div>
+              <div class="role-desc">Lideré el equipo de diseño estructural y FEA de la transmisión y el chasis del rover, combinando optimización topológica con manufactura aditiva y convencional. Recibimos el Safety Award en el NASA Human Exploration Rover Challenge 2022.</div>
+              <div class="role-tags">
+                <span class="tag">FEA</span>
+                <span class="tag">Opt. Topológica</span>
+                <span class="tag">Manufactura Aditiva</span>
+                <span class="tag">NASA HERC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="projects-header">
+        <div>
+          <div class="section-tag">Trabajo destacado</div>
+          <h2>Proyectos seleccionados</h2>
+        </div>
+      </div>
+      <div class="projects-grid reveal">
+
+        <a href="/es/projects/hydrogen-embrittlement" class="project-card">
+          <span class="project-arrow">↗</span>
+          <div class="project-thumb placeholder" data-label="FEA · Phase Field">
+            <img src="/images/projects/hydrogen-thumb.jpg" alt="Simulación de fragilización por hidrógeno" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="project-body">
+            <div class="project-num">01</div>
+            <h3 class="project-title">Fragilización por hidrógeno en válvulas de motor aeroespacial</h3>
+            <p class="project-desc">Modelo Phase Field Damage (PFDM) combinado con mecanismos HEDE y HELP para analizar la falla inducida por hidrógeno en componentes estructurales de motor.</p>
+            <div class="project-tags">
+              <span class="tag">FEA</span><span class="tag">MOOSE</span><span class="tag">Phase Field</span><span class="tag">C++</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/es/projects/energetic-materials" class="project-card">
+          <span class="project-arrow">↗</span>
+          <div class="project-thumb placeholder" data-label="Ondas de Choque · FEA Térmico">
+            <img src="/images/projects/energetic-thumb.jpg" alt="Simulación de ondas de choque" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="project-body">
+            <div class="project-num">02</div>
+            <div class="project-award">Purdue University</div>
+            <h3 class="project-title">Simulación FE de ondas de choque en materiales energéticos</h3>
+            <p class="project-desc">Análisis por elementos finitos de regiones localizadas con alta tasa de temperatura en materiales energéticos bajo cargas de onda de choque.</p>
+            <div class="project-tags">
+              <span class="tag">ANSYS</span><span class="tag">Mec. de Choque</span><span class="tag">FEA Térmico</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/es/projects/nasa-herc-rover" class="project-card">
+          <span class="project-arrow">↗</span>
+          <div class="project-thumb placeholder" data-label="NASA HERC · Rover">
+            <img src="/images/projects/rover-thumb.jpg" alt="Rover NASA HERC" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="project-body">
+            <div class="project-num">03</div>
+            <div class="project-award">⭑ Safety Award NASA 2022</div>
+            <h3 class="project-title">Diseño Estructural y FEA — Rover NASA HERC</h3>
+            <p class="project-desc">Liderazgo del diseño estructural y la optimización FEA de la transmisión y el chasis del rover. Participación en el Human Exploration Rover Challenge de la NASA.</p>
+            <div class="project-tags">
+              <span class="tag">FEA</span><span class="tag">Opt. Topológica</span><span class="tag">Manuf. Aditiva</span><span class="tag">Autodesk</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-tag">Caja de herramientas</div>
+      <h2>Habilidades y herramientas</h2>
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <div class="skill-group-title">Simulación</div>
+          <ul class="skill-list">
+            <li>MOOSE Framework</li><li>ANSYS Mechanical</li><li>ANSYS Fluent</li><li>OpenFOAM</li><li>ParaView</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Programación</div>
+          <ul class="skill-list">
+            <li>C++</li><li>Python</li><li>MATLAB / Simulink</li><li>LaTeX</li><li>Linux / Bash</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">CAD y Diseño</div>
+          <ul class="skill-list">
+            <li>Autodesk Inventor</li><li>AutoCAD</li><li>OpenRocket</li><li>Manuf. Aditiva</li><li>Adobe Photoshop</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Investigación</div>
+          <ul class="skill-list">
+            <li>Mec. de Sólidos</li><li>Mec. Computacional</li><li>Phase Field</li><li>Data-Driven Computing</li><li>Modelado Matemático</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards">
+    <div class="section-inner">
+      <div class="section-tag">Reconocimientos</div>
+      <h2>Distinciones y premios</h2>
+      <div class="awards-list reveal">
+        <div class="award-item">
+          <span class="award-year">2024</span>
+          <div><div class="award-name">Space Generation Leadership Award (SGLA)</div><div class="award-org">Space Generation Advisory Council — Viena, Austria</div></div>
+          <span class="award-icon">🏆</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2024</span>
+          <div><div class="award-name">Ponente en el IAC</div><div class="award-org">International Astronautical Congress — Milán, Italia</div></div>
+          <span class="award-icon">🛰️</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2022</span>
+          <div><div class="award-name">Safety Award — NASA Human Exploration Rover Challenge</div><div class="award-org">NASA HERC · Moción de felicitación del Ministerio de Educación, Colombia</div></div>
+          <span class="award-icon">🚀</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2022</span>
+          <div><div class="award-name">Mención por resultados destacados en pruebas académicas internacionales</div><div class="award-org">Universidad Nacional de Colombia</div></div>
+          <span class="award-icon">⭑</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="contact-inner reveal">
+        <h2 class="contact-heading">Construyamos<br><span class="dim">algo preciso.</span></h2>
+        <p class="contact-sub">Abierto a colaboraciones de investigación entre Michigan y otros grupos — artículos conjuntos, proyectos en mecánica computacional y trabajos del sector aeroespacial. Con gusto le escucho, sumercé.</p>
+        <div class="contact-links">
+          <a href="mailto:alejorm@umich.edu" class="contact-link">✉ alejorm@umich.edu</a>
+          <a href="https://linkedin.com/in/lriaomol" class="contact-link" target="_blank" rel="noopener">↗ LinkedIn</a>
+          <a href="https://github.com/lriaomol" class="contact-link" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-text">Alejandro Riaño-Molina <span>·</span> Ann Arbor, Michigan</span>
+    <span class="footer-text">Hecho con Astro <span>·</span> Alojado en GitHub Pages</span>
+  </footer>
+
+  <script is:inline>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    const canvas = document.getElementById('hero-canvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+      resize();
+      window.addEventListener('resize', resize);
+      const NODES = 28;
+      const nodes = Array.from({ length: NODES }, () => ({
+        x: Math.random(), y: Math.random(),
+        vx: (Math.random() - 0.5) * 0.0003,
+        vy: (Math.random() - 0.5) * 0.0003,
+      }));
+      function draw() {
+        const W = canvas.width, H = canvas.height;
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < NODES; i++) {
+          for (let j = i + 1; j < NODES; j++) {
+            const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+            if (dist < 0.28) {
+              const alpha = (1 - dist/0.28) * 0.7;
+              const t = dist/0.28;
+              ctx.strokeStyle = `rgba(${Math.round(34+t*89)},${Math.round(211-t*140)},${Math.round(238-t*38)},${alpha})`;
+              ctx.lineWidth = (1 - dist/0.28) * 1.2;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x*W, nodes[i].y*H);
+              ctx.lineTo(nodes[j].x*W, nodes[j].y*H);
+              ctx.stroke();
+            }
+          }
+        }
+        nodes.forEach(n => {
+          ctx.beginPath();
+          ctx.arc(n.x*W, n.y*H, 1.5, 0, Math.PI*2);
+          ctx.fillStyle = 'rgba(123,140,255,0.6)';
+          ctx.fill();
+        });
+        nodes.forEach(n => {
+          n.x += n.vx; n.y += n.vy;
+          if (n.x < 0 || n.x > 1) n.vx *= -1;
+          if (n.y < 0 || n.y > 1) n.vy *= -1;
+        });
+        requestAnimationFrame(draw);
+      }
+      draw();
+    }
+  </script>
+
+</Layout>
